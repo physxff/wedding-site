@@ -30,7 +30,7 @@ export default function DateSection() {
         <div className="mx-auto mt-10 h-px w-24 bg-neutral-300" />
 
         <p className="mt-8 text-xl md:text-2xl tracking-[0.2em] uppercase">
-          Пятница
+          Среда
         </p>
       </motion.div>
     </section>
