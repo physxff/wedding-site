@@ -84,41 +84,40 @@ export default function RSVPSection() {
       {/* ЛЕНТА */}
       <div className="relative flex items-center justify-center min-h-[45svh] overflow-hidden">
 
-        <svg
-    viewBox="0 0 30000 3000"
-    className="absolute left-1/2 top-1/2 w-[260%] h-[140%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+  <svg
+    viewBox="0 0 1000 400"
+    className="absolute inset-0 w-full h-full"
     preserveAspectRatio="xMidYMid meet"
   >
     <motion.path
-      d="M-14993.386 2006.414C-12986.627 2011.38-13012.358 30.1-9988.739 28.277-6998.248 28.277-7052.62 1985.69-4004.067 2001.341-1988.866 2011.367-1998.892-996.395-3993.656-986.063-6010.345-986.063-5970.72 2006.577-4000.636 2006.577-992.55 1985.393 24.267 1032.127 1348.368-1200.996 2167.244-.841 2872.407 572.171 4534.877 821.811 5031.059 895.617 6004.773 774.904 6023.439 12.917 5966.646-475.753 5695.952-898.417 5020.205-1010.381 4358.07-1080.608 3634.873-774.942 3485.257-17.18 3435.414 540.539 3576.946 935.419 3998.304 1507.262 4901.215 2520.529 6817.392 2841.564 6004.379 3990.546 5206.008 2826.508 7118.363 2500.464 8011.241 1507.262 8422.567 925.387 8563.02 453.867 8482.761-17.654 8262.653-748.833 7754.348-1073.92 6998.578-999.642 6322.15-897.182 6139.317-519.326 6023.523 4.795 6007.805 813.264 6975.927 891.225 7413.572 813.994 9099.795 466.452 9870.256.644 10763.135-1233.334 12010.463 990.908 13050.411 1997.842 15988.678 2030.856 17986.657 2015.854 17986.657-981.798 16005.376-968.933 14024.095-981.798 13998.364 1990.123 15989.408 2036.986 19017.369 2017.36 20020.875 23.214 22979.931 10.349 25997.22-3.539 26060.79 2009.527 28010.286 2009.527"
+      d="M0 200 C 150 50, 350 350, 500 200 S 850 50, 1000 200"
       fill="none"
       stroke="#c81d25"
+      strokeWidth={70}
       strokeLinecap="round"
-      strokeWidth={90}
       initial={{ pathLength: 0, opacity: 0 }}
       animate={controls}
     />
   </svg>
 
-        {/* ТАЙМЕР */}
-        <div className="relative z-10 px-6 py-12 text-center">
+  <div className="relative z-10 px-6 py-12 text-center">
+    <p className="text-sm md:text-2xl uppercase tracking-[0.4em] text-neutral-700">
+      До свадьбы осталось
+    </p>
 
-          <p className="text-sm md:text-2xl uppercase tracking-[0.4em] text-neutral-700">
-            До свадьбы осталось
-          </p>
-
-          {!timeLeft ? (
-            <p className="mt-7 text-2xl">Загрузка...</p>
-          ) : (
-            <div className="mt-3 flex justify-center gap-6 text-2xl md:text-4xl font-light">
-              <div>{timeLeft.days} д</div>
-              <div>{timeLeft.hours} ч</div>
-              <div>{timeLeft.minutes} м</div>
-              <div>{timeLeft.seconds} с</div>
-            </div>
-          )}
-        </div>
+    {!timeLeft ? (
+      <p className="mt-7 text-2xl">Загрузка...</p>
+    ) : (
+      <div className="mt-3 flex justify-center gap-6 text-2xl md:text-4xl font-light">
+        <div>{timeLeft.days} д</div>
+        <div>{timeLeft.hours} ч</div>
+        <div>{timeLeft.minutes} м</div>
+        <div>{timeLeft.seconds} с</div>
       </div>
+    )}
+  </div>
+
+</div>
 
       {/* ФОРМА */}
       <div className="px-6">
